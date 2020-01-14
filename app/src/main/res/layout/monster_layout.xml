@@ -1,0 +1,481 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/cardview_dark_background"
+    android:padding="8dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:text="Medium humanoid (any race), any alignment"
+
+            android:id="@+id/monster_desc_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:id="@+id/monster_div_desc"
+            android:layout_width="match_parent"
+            android:layout_height="4dp"
+            android:layout_margin="8dp"
+            android:background="@android:color/holo_red_dark"
+            app:layout_constraintTop_toBottomOf="@id/monster_desc_view" />
+
+        <LinearLayout
+            android:id="@+id/monster_layout_ac"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@id/monster_div_desc">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Armor Class"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/monster_ac_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:text="11 (16 with barkskin)" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/monster_layout_hp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/monster_layout_ac">
+
+            <TextView
+                android:layout_width="wrap_content"
+
+                android:layout_height="wrap_content"
+                android:text="Hit Points"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/monster_hp_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginLeft="4dp"
+                android:text="27 (5d8 + 5)" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/monster_layout_spd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/monster_layout_hp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:ellipsize="none"
+                android:maxLines="100"
+                android:scrollHorizontally="false"
+
+                android:text="Speed"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/monster_spd_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginLeft="4dp"
+                android:text="30 ft." />
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/monster_div_stat"
+            android:layout_width="match_parent"
+            android:layout_height="4dp"
+            android:layout_margin="8dp"
+            android:background="@android:color/holo_red_dark"
+            app:layout_constraintTop_toBottomOf="@id/monster_layout_spd" />
+
+        <LinearLayout
+            app:layout_constraintTop_toBottomOf="@id/monster_div_stat"
+            android:id="@+id/monster_layout_stat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:textAlignment="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="STR"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:textAlignment="center"
+                    android:id="@+id/monster_stat_str"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="10 (+0)" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:textAlignment="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="DEX"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:textAlignment="center"
+                    android:id="@+id/monster_stat_dex"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="10 (+0)" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:textAlignment="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="CON"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:textAlignment="center"
+                    android:id="@+id/monster_stat_con"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="10 (+0)" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:textAlignment="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="INT"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:textAlignment="center"
+                    android:id="@+id/monster_stat_int"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="10 (+0)" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:textAlignment="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="WIS"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:textAlignment="center"
+                    android:id="@+id/monster_stat_wis"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="10 (+0)" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:textAlignment="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="CHA"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:textAlignment="center"
+                    android:id="@+id/monster_stat_cha"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="10 (+0)" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/monster_div_sense"
+            android:layout_width="match_parent"
+            android:layout_height="4dp"
+            android:layout_margin="8dp"
+            android:background="@android:color/holo_red_dark"
+            app:layout_constraintTop_toBottomOf="@id/monster_layout_stat" />
+
+        <LinearLayout
+            android:id="@+id/monster_layout_skill"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/monster_div_sense">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Skills"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/monster_skill_view"
+
+                android:layout_weight="1"
+                android:ellipsize="none"
+                android:maxLines="100"
+                android:scrollHorizontally="false"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginLeft="4dp"
+                android:text="Medicine +4, Nature +3, Perception +4" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/monster_layout_sense"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/monster_layout_skill">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Senses"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/monster_sense_view"
+
+                android:layout_weight="1"
+                android:ellipsize="none"
+                android:maxLines="100"
+                android:scrollHorizontally="false"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginLeft="4dp"
+                android:text="darkvision 60 ft., passive Perception 11" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/monster_layout_lang"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/monster_layout_sense">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Languages"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/monster_lang_view"
+
+                android:layout_weight="1"
+                android:ellipsize="none"
+                android:maxLines="100"
+                android:scrollHorizontally="false"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginLeft="4dp"
+                android:text="darkvision 60 ft., passive Perception 11" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/monster_layout_chall"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/monster_layout_lang">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Challenge"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/monster_chall_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_weight="1"
+                android:ellipsize="none"
+                android:maxLines="100"
+                android:scrollHorizontally="false"
+
+                android:layout_marginStart="4dp"
+                android:layout_marginLeft="4dp"
+                android:text="2 (450 XP)" />
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/monster_div_trait"
+            android:layout_width="match_parent"
+            android:layout_height="4dp"
+            android:layout_margin="8dp"
+            android:background="@android:color/holo_red_dark"
+            app:layout_constraintTop_toBottomOf="@id/monster_layout_chall" />
+
+        <LinearLayout
+            android:id="@+id/monster_layout_traits"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintTop_toBottomOf="@id/monster_div_trait">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Brave"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:ellipsize="none"
+                android:maxLines="100"
+                android:scrollHorizontally="false"
+
+                android:text="The gladiator has advantage on saving throws against being {@condition frightened}." />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/monster_layout_spell"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintTop_toBottomOf="@id/monster_layout_traits">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Spellcasting"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/monster_spell_header_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:ellipsize="none"
+                android:maxLines="100"
+                android:scrollHorizontally="false"
+
+                android:text="The druid is a 4th-level spellcaster. Its
+spellcasting ability is Wisdom (spell save DC 12, +4 to hit with
+spell attacks). It has the following druid spells prepared:" />
+
+            <TextView
+                android:id="@+id/monster_spell_list_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+
+                android:ellipsize="none"
+                android:maxLines="100"
+                android:scrollHorizontally="false"
+
+                android:text="Cantrips (at will): druidcraft, produce flame, shillelagh\n1st level (4 slots): entangle, longstrider, speak with
+animals, thunderwave\n2nd level (3 slots): animal messenger, barkskin" />
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/monster_div_actions"
+            android:layout_width="match_parent"
+            android:layout_height="4dp"
+            android:layout_margin="8dp"
+            android:background="@android:color/holo_red_dark"
+            app:layout_constraintTop_toBottomOf="@id/monster_layout_spell" />
+
+        <LinearLayout
+            android:id="@+id/monster_layout_actions"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintTop_toBottomOf="@id/monster_div_actions">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Quarterstaff"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:ellipsize="none"
+                android:maxLines="100"
+                android:scrollHorizontally="false"
+
+                android:text="{@atk mw} {@hit 2} to hit ({@hit 4} to hit with shillelagh), reach 5 ft., one target. {@h}3 ({@damage 1d6}) bludgeoning damage, or 6 ({@damage 1d8 + 2}) bludgeoning damage with shillelagh or if wielded with two hands." />
+
+        </LinearLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
